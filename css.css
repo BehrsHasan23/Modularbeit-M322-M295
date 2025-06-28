@@ -1,0 +1,109 @@
+/* Legt eine benutzerdefinierte Hintergrundfarbe fest.
+   Die Farbe "#f0f0f0f7" wird als Hintergrund verwendet – passen Sie diesen Wert nach Bedarf an. */
+   .custom-bg {
+    background-color: #f0f0f0f7; /* Passen Sie die Farbe an Ihren Hintergrund an */
+}
+
+/* Definiert das Aussehen von Sammlungstiteln.
+   - Textfarbe: dunkel (#2c3e50)
+   - Fettgedruckt (font-weight: 700)
+   - Zentriert ausgerichtet
+   - Großbuchstaben (uppercase)
+   - Erhöht den Buchstabenabstand (letter-spacing: 2px) */
+.collection-title {
+    color: #2c3e50;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Begrenzung und Zentrierung eines Gitters, in dem Bücher angezeigt werden.
+   - Zentriert den Inhalt horizontal
+   - Setzt die maximale Breite auf 1200px */
+.book-grid {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Gestaltet die Buchkarten:
+   - Weißer Hintergrund (rgb(255, 255, 255))
+   - Abgerundete Ecken (border-radius: 10px)
+   - Leichter Schatteneffekt (box-shadow) für Tiefenwirkung
+   - Sanfte Transformation beim Hover (transition)
+   - Höhe: 100% (damit die Karten gleich hoch sind) */
+.book-card {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+/* Definiert den Hover-Effekt für Buchkarten:
+   - Beim Überfahren mit der Maus wird die Karte leicht nach oben verschoben (translateY(-5px)) */
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Gestaltet das Buchbild innerhalb der Karte:
+   - Nimmt die gesamte Breite ein (width: 100%)
+   - Feste Höhe von 300px
+   - Das Bild wird zugeschnitten, um den Container auszufüllen (object-fit: cover)
+   - Abgerundete Ecken oben, um zum Design der Buchkarte zu passen */
+.book-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Definiert den Bereich mit Informationen zum Buch:
+   - Innenabstand (padding) von 1,5rem
+   - Text wird zentriert angezeigt */
+.book-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Stilisiert den Buchtitel:
+   - Schriftgröße: 1.1rem
+   - Abstand unten: 0.5rem
+   - Textfarbe: ein dunkles Grau (#34495e) */
+.book-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+}
+
+/* Definiert das Aussehen des Autors:
+   - Kleinere Schriftgröße (0.9rem)
+   - Hellere Textfarbe (#7f8c8d) für weniger Betonung
+   - Kein zusätzlicher Abstand unten (margin-bottom: 0) */
+.book-author {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 0;
+}
+
+/* Wrapper für die Paginierung:
+   - Fügt oben einen größeren Abstand (margin-top: 3rem) hinzu,
+   - "!important" stellt sicher, dass dieser Wert Vorrang vor anderen Regeln hat */
+.pagination-wrapper {
+    margin-top: 3rem !important;
+}
+
+/* Stellt das Aussehen der einzelnen Seitenlinks in der Paginierung ein:
+   - Keine Rahmen (border: none)
+   - Kleiner horizontaler Abstand (margin: 0 5px) */
+.page-link {
+    border: none !important;
+    margin: 0 5px;
+}
+
+/* Hebt den aktiven Paginierungslink hervor:
+   - Setzt den Hintergrund des aktiven Links auf ein helles Blau (#3498db) */
+.page-item.active .page-link {
+    background-color: #3498db !important;
+}
